@@ -1,0 +1,169 @@
+html,body {
+  height:100%;
+}
+
+header {
+  display:block;
+  background:#3a3a3d;
+  padding:0px 0px;
+}
+
+#imgCodoACodo{
+  height: 70px;
+  margin-left: 35px;
+}
+.row.menuConImg {
+  padding-left: 80px;
+}
+#tituloMenu {
+  padding-top: 20px;
+  color: white;
+  font-family: "arial", serif;
+  text-align: left;
+}
+div#titulosMenu {
+  padding-top: 25px;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.opcMenu{
+  color: white;
+  text-decoration: none;
+}
+.comprarTickets{
+  color: rgb(47, 226, 47);
+}
+
+#tituloDelContenido{
+  text-align: center;
+}
+
+.lenguajes{
+  margin-bottom: 5px;
+}
+.javaScript{
+  background-color: #eeea0f; 
+  border-radius: 10px; 
+  text-align: center;
+  font-size: 12px;
+  margin-left: 10px;
+
+}
+.react{
+  background-color: #09a2df; 
+  border-radius: 10px; 
+  color:white;
+  text-align: center;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.negocios{
+  background-color: #636363; /* Color de fondo sólido */
+  border-radius: 10px; /* Radio del borde */
+  color:white;
+  text-align: center;
+  font-size: 12px;
+  margin-left: 10px;
+
+}
+.startups{
+  background-color: #e73434; /* Color de fondo sólido */
+  border-radius: 10px; /* Radio del borde */
+  color:white;
+  text-align: center;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.row.octubreBuenosAires {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.col.textoctubreBuenosAires {
+  background-color: rgb(65, 64, 64);
+  color: white;
+  font-size: 13px;
+}
+
+.textarea{
+  margin-top: 15px;
+}
+
+.containerForm{
+  max-width: 800px;
+  margin: 0 auto; 
+  padding: 20px; 
+  text-align: left;
+}
+
+footer{
+  display:block;
+  background:#395d5f;
+  padding: 15px;
+  margin-top: 15px;
+
+}
+
+.seccionesFooter{
+  text-decoration: none;
+  color: white;
+  }
+
+ .opcFooter{
+   text-decoration: none;
+   color: white;
+ }
+
+/*2da Etapa - Comprar Ticket*/
+p#totalFianl {
+  background-color: rgb(218, 218, 255);
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.container.text-center.comprarTicket {
+  margin-top: 15px;
+}
+.card-body.estudiante {
+  border: 2px solid rgb(4, 0, 255);
+}
+.card-body.trainee {
+  border: 2px solid rgb(0, 183, 255);
+}
+.card-body.junior {
+  border: 2px solid rgb(255, 166, 0);
+}
+
+.containerTicket{
+  max-width: 990px;
+  margin: 0 auto;
+  text-align: left;
+
+}
+
+#botonTickets {
+  background-color: #32ff32; 
+  color: #000; 
+  border: none; 
+  padding: 10px 20px; 
+  transition: background-color 0.3s; 
+}
+
+#botonTickets:hover {
+  background-color: #329632; 
+  color: #fff; 
+}
