@@ -1,169 +1,99 @@
-html,body {
-  height:100%;
-}
+.texto-fijo {
+  position: absolute; /* Posición absoluta para el texto fijo */
+  top: 10px;          /* Ajusta según la posición deseada desde la parte superior */
+  left: 50%;          /* Alinea el texto en el centro */
+  transform: translateX(-50%); /* Centra el texto horizontalmente */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  z-index: 10;        /* Asegura que el texto esté por encima de las imágenes */
 
-header {
-  display:block;
-  background:#3a3a3d;
-  padding:0px 0px;
 }
-
-#imgCodoACodo{
-  height: 70px;
-  margin-left: 35px;
-}
-.row.menuConImg {
-  padding-left: 80px;
-}
-#tituloMenu {
-  padding-top: 20px;
+.texto-fijoAyA {
   color: white;
-  font-family: "arial", serif;
-  text-align: left;
+  font-size: 55px;
+  margin-top: 90px;
 }
-div#titulosMenu {
-  padding-top: 25px;
+
+.texto-curvo {
   color: white;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-}
-
-ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-.opcMenu{
-  color: white;
-  text-decoration: none;
-}
-.comprarTickets{
-  color: rgb(47, 226, 47);
-}
-
-#tituloDelContenido{
+  font-size: 20px;
+  margin-top: 65px;
   text-align: center;
 }
-
-.lenguajes{
-  margin-bottom: 5px;
+.menuCasamiento {
+  background-color: #511619;
+  font-family: 'Amsterdam Three', sans-serif;
 }
-.javaScript{
-  background-color: #eeea0f; 
-  border-radius: 10px; 
+.invitacion {
+  font-size: 20px; 
+}
+.nombres {
+  font-size: 35px;
   text-align: center;
-  font-size: 12px;
-  margin-left: 10px;
-
 }
-.react{
-  background-color: #09a2df; 
-  border-radius: 10px; 
-  color:white;
+.card-title-invitacion{
   text-align: center;
-  margin-left: 5px;
-  font-size: 12px;
+  font-size: 35px; 
+}
+.invitacionPrecentacion{
+  font-style: oblique;
+  font-size: 20px;
+}
+.card.h-100 {
+  background-color: rgb(168, 126, 126);
+}
+.card-body {
+  background-color:#511619;
+  border-radius: 1px;
+  font-style: oblique;
 }
 
-.negocios{
-  background-color: #636363; /* Color de fondo sólido */
-  border-radius: 10px; /* Radio del borde */
-  color:white;
-  text-align: center;
-  font-size: 12px;
-  margin-left: 10px;
-
+.koudfyb-galeri{
+  display: flex;
+  height: 27rem;
+  gap: 1rem;
 }
-.startups{
-  background-color: #e73434; /* Color de fondo sólido */
-  border-radius: 10px; /* Radio del borde */
-  color:white;
-  text-align: center;
-  margin-left: 5px;
-  font-size: 12px;
+.koudfyb-galeri > div {
+  flex: 1;
+  border-radius: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
 }
-
-.row.octubreBuenosAires {
-  margin-top: 25px;
-  margin-bottom: 25px;
+.koudfyb-galeri > div:hover {
+  flex: 5;
 }
-
-.col.textoctubreBuenosAires {
-  background-color: rgb(65, 64, 64);
-  color: white;
-  font-size: 13px;
+.fechanumero {
+  font-size: 65px;
 }
-
-.textarea{
-  margin-top: 15px;
+.hora {
+  font-size: 25px;
 }
-
-.containerForm{
-  max-width: 800px;
-  margin: 0 auto; 
-  padding: 20px; 
-  text-align: left;
+.fecha {
+  font-size: 65px;
+  padding-left: 2px;
+  padding-right: 5px;
 }
-
-footer{
-  display:block;
-  background:#395d5f;
-  padding: 15px;
-  margin-top: 15px;
-
+span.recepcion {
+  font-size: 25px;
 }
-
-.seccionesFooter{
-  text-decoration: none;
-  color: white;
-  }
-
- .opcFooter{
-   text-decoration: none;
-   color: white;
- }
-
-/*2da Etapa - Comprar Ticket*/
-p#totalFianl {
-  background-color: rgb(218, 218, 255);
-  padding: 20px;
-  margin-top: 15px;
+span.recepcionLugar {
+  font-size: 50px;
 }
-
-.container.text-center.comprarTicket {
-  margin-top: 15px;
+button.btn.btn-outline-light {
+  border-radius: 50px;
 }
-.card-body.estudiante {
-  border: 2px solid rgb(4, 0, 255);
+.imgBrindis 
+{
+  height: 5rem;
+  margin-bottom: 15px;
 }
-.card-body.trainee {
-  border: 2px solid rgb(0, 183, 255);
-}
-.card-body.junior {
-  border: 2px solid rgb(255, 166, 0);
-}
-
-.containerTicket{
-  max-width: 990px;
-  margin: 0 auto;
-  text-align: left;
-
-}
-
-#botonTickets {
-  background-color: #32ff32; 
-  color: #000; 
-  border: none; 
-  padding: 10px 20px; 
-  transition: background-color 0.3s; 
-}
-
-#botonTickets:hover {
-  background-color: #329632; 
-  color: #fff; 
+#dias, #horas, #minutos, #segundos {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  margin: 0 5px;
+  font-size: 20px;
 }

@@ -7,105 +7,125 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="javascript.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
-    <title>Adriano Caloni</title>
+    <title>Tarjeta Casamiento</title>
 </head>
 <body>
     <header class="menuCasamiento">
-        <nav class="navbar navbar-dark menuCasamientofixed-top navbar-expand-lg">
-            <div class="container menuCasamiento">
-                <div class ="invitacion">
-                    Los invitamos a nuestro casamiento
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">El lugar y la fecha</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Hospedajes | Hoteles</a>
-                        </li>               
-                    </ul>
-                </div>
+            <div class="koudfyb-galeri">
+                <div style="background-image: url('https://img.freepik.com/foto-gratis/novio-poniendo-anillo-dedo-novia_1157-338.jpg');"></div> 
+                <div style="background-image: url('https://img.freepik.com/foto-gratis/anillos-bodas-oro-rosa-blanca-ramo-boda_8353-10467.jpg');"></div> 
+                <div style="background-image: url('https://st3.depositphotos.com/13349494/18560/i/450/depositphotos_185606910-stock-photo-close-up-view-of-wedding.jpg');"></div> 
             </div>
-        </nav>
+            <div class="texto-fijo">
+                <p class="texto-curvo">Nuestra Boda</p>
+            </div>
+            <div class="texto-fijo">
+               <p class="texto-fijoAyA"> A & A </p>
+            </div>
     </header> <br><br>
+    <section class="container mb-4">     
+        <p class ="invitacion">Te invitamos a ser parte de un capítulo inolvidable en nuestras vidas. Acompáñanos y comparte la alegría de este momento único en nuestro camino juntos. </p>
+    </section>
     <section class="container mb-4">
         <div class="row justify-content-center">
             <div class="col-md-11">
-                <div class="row ">
+                <div class="row">
                     <div class="col">
-                        <div class="card h-100">
+                        <div>
                             <div class="card-body">
-                                <p class="card-text invitacionPrecentacion">
-                                    "Te invitamos a ser parte de un capítulo inolvidable en nuestras vidas. Acompáñanos y comparte la alegría de este momento único en nuestro camino juntos."
+                                <p class="nombres">
+                                    Antonella Alemida
                                 </p>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="col">
+                        <div>
+                            <div class="card-body">
+                                <p class="nombres">
+                                     Adriano Caloni
+                                </p>
+                            </div>
+                        </div>
+                </div>             
             </div>
         </div>
+    </section>
 
-    </section>>
+    <section>
+        <div class="container text-center">
+            <div class="row">
+                <div class="mb-2">
+                    <span class="fechanumero">01</span>
+                    <span class="fecha">|</span>
+                    <span class="fechanumero">09</span>
+                    <span class="fecha">|</span>
+                    <span class="fechanumero">24</span><br><br>
+                    <p class = "reloj"><span id="dias"></span><span id="horas"></span>:<span id="minutos"></span>:<span id="segundos"></span></p>   
+                </div>
+            </div>
+        </div><br><br>
+    </section>
 
     <section>
         <div class="koudfyb-galeri">
             <div style="background-image: url('https://img.freepik.com/foto-gratis/novio-poniendo-anillo-dedo-novia_1157-338.jpg');"></div> 
             <div style="background-image: url('https://img.freepik.com/foto-gratis/anillos-bodas-oro-rosa-blanca-ramo-boda_8353-10467.jpg');"></div> 
             <div style="background-image: url('https://st3.depositphotos.com/13349494/18560/i/450/depositphotos_185606910-stock-photo-close-up-view-of-wedding.jpg');"></div> 
-        
-            <style>
-                Body {background-color: rgb(95, 51, 51);}
-                .menuCasamiento {
-                    background-color: rgb(95, 51, 51);
-                    font-style: oblique;
-                }
-                .invitacion {
-                    font-style: oblique;
-                    font-size: 20px; 
-                    color: white;
-                }
-                .invitacionPrecentacion{
-                    font-style: oblique;
-                    font-size: 20px;
-                }
-                .card.h-100 {
-                    background-color: rgb(173, 103, 103);
-                }
-                .card-body {
-                    background-color: rgb(95, 51, 51);
-                    border-radius: 1px;
-                    color: white;
-                    font-style: oblique;
-                }
-
-                .koudfyb-galeri{
-                    display: flex;
-                    height: 27rem;
-                    gap: 1rem;
-                }
-                .koudfyb-galeri > div {
-                    flex: 1;
-                    border-radius: 1rem;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: auto 100%;
-                    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
-                }
-                .koudfyb-galeri > div:hover {
-                    flex: 5;
-                }
-            </style>
         </div>
+    </section><br><br>
+
+    <section>
+        <div class="container text-center">
+            <div class="row">
+                    <div class="d-grid gap-2">
+                        <span class="recepcion"><img src="dist/img/church.png" class="imgBrindis" alt="brindis"></span>
+                        <span class="recepcion">Ceremonia</span>
+                        <div class="row">
+                            <div class="mb-2">
+                                <span class="hora">07:00 P.M.</span><br><br>
+                            </div>
+                        </div>
+                        <span class="recepcionLugar">IGLESIA X</span>
+                        <button class="btn btn-outline-light" type="button">VER UBICACIÓN</button>
+                    </div>
+            </div>
+        </div><br><br>
     </section>
+
+    <section>
+        <div class="container text-center">
+            <div class="row">
+                    <div class="d-grid gap-2">
+                        <span class="recepcion"><img src="dist/img/brindis.png" class="imgBrindis" alt="brindis"></span>
+                        <span class="recepcion">Recepcion</span>
+                        <div class="row">
+                            <div class="mb-2">
+                                <span class="hora">09:00 P.M.</span>                                 
+                            </div>
+                        </div>
+                        <span class="recepcionLugar">PAMPA</span>
+                        <button class="btn btn-outline-light" type="button">VER UBICACIÓN</button>
+                    </div>
+            </div>
+        </div><br><br>
+    </section>
+
+    <section>
+        <div class="container text-center">
+            <div class="row">
+                <img src="dist/img/teofilo.jpg"  alt="teofilo">     
+            </div>
+        </div><br><br>
+    </section>
+<style>
+body {
+  background-color: #511619;
+  color: white;
+}
+</style>
+</div>
+  
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
