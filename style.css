@@ -39,6 +39,7 @@
 .nombres {
   font-size: 40px;
   font-family: 'Sacramento', cursive;
+  text-align: center;
 }
 .card-title-invitacion{
   text-align: center;
