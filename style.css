@@ -1,10 +1,10 @@
-
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=K2D:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 
 .texto-fijo {
   position: absolute; /* Posición absoluta para el texto fijo */
@@ -19,17 +19,23 @@
 .texto-fijoAyA {
   font-family: 'Parisienne', cursive;
   font-size: 35px;
-  margin-top: 90px;
+  margin-top: 110px;
 }
 
 .texto-curvo {
   font-family: 'Parisienne', cursive;
   font-size: 20px;
-  margin-top: 65px;
+  margin-top: 75px;
   text-align: center;
 }
+.texto-curvo, .texto-fijoAyA {
+  text-shadow: 0 0 5px #fff, /* brillo blanco */
+               0 0 10px #fff, /* brillo más fuerte */
+               0 0 15px #861313, /* brillo de color (rosa en este caso) */
+               0 0 20px #861313; /* brillo más fuerte de color */
+}
 .menuCasamiento {
-  background-color: #511619;
+  background-color: #4e0303;
   font-family: 'Amsterdam Three', sans-serif;
 }
 .invitacion {
@@ -53,7 +59,7 @@
   background-color: rgb(168, 126, 126);
 }
 .card-body {
-  background-color:#511619;
+  background-color: #4e0303;
   border-radius: 1px;
   font-style: oblique;
 }
@@ -97,7 +103,7 @@ span.recepcionLugar {
   font-size: 40px;
   font-family: 'Diphylleia', serif;
 }
-button.btn.btn-outline-light {
+a.btn.btn-outline-light {
   border-radius: 50px;
 }
 .imgBrindis 
@@ -112,4 +118,71 @@ button.btn.btn-outline-light {
   border-radius: 5px;
   margin: 0 5px;
   font-size: 20px;
+}
+.circulo {
+  position: absolute; /* Establece la posición absoluta */
+  top: 50%; /* Centra verticalmente */
+  left: 60%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Centra el punto central del círculo */
+  z-index: 1; /* Asegura que el texto esté sobre la imagen */
+  width: 220px;  /* Ajusta el ancho según lo necesites */
+  height: 220px; /* Ajusta la altura según lo necesites */
+  margin-top: 50px;
+}
+
+img.elgrandiaPasos {
+  height: 4rem;
+}
+
+.vertical-line {
+  border-right: 1px solid #ccc; /* Color y grosor del borde */
+  height: 100%; /* Altura del borde */
+}
+
+/* Asegura que la última columna no tenga un borde derecho */
+.vertical-line:last-child {
+  border-right: none;
+}
+
+span.deco {
+  margin-left: 15px;
+}
+
+span.pasosEvento {
+  /* text-align: left; */
+  margin-left: 15px;
+}
+
+img.elgrandiaPasos {
+  margin-left: 35px;
+}
+
+img.love {
+  height: 5rem;
+}
+
+.pasos{
+  font-family: 'Diphylleia', serif;
+}
+
+h5.elgranDiaLetras {
+  font-family: 'Parisienne', cursive;
+  font-size: 55px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.complejoIglesia {
+  font-family: 'EB Garamond', serif;
+  font-size: 40px;
+}
+
+.teofilo{
+  border-radius: 10%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 
+  0 0 20px rgba(255, 255, 255, 0.7), 
+  0 0 30px rgba(255, 255, 255, 0.7),
+  0 0 40px rgba(255, 255, 255, 0.7),
+  0 0 50px rgba(255, 255, 255, 0.7);
+
 }
