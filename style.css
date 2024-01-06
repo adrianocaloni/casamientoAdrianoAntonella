@@ -1,3 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+
+
 .texto-fijo {
   position: absolute; /* Posición absoluta para el texto fijo */
   top: 10px;          /* Ajusta según la posición deseada desde la parte superior */
@@ -9,13 +17,13 @@
 
 }
 .texto-fijoAyA {
-  color: white;
-  font-size: 55px;
+  font-family: 'Parisienne', cursive;
+  font-size: 35px;
   margin-top: 90px;
 }
 
 .texto-curvo {
-  color: white;
+  font-family: 'Parisienne', cursive;
   font-size: 20px;
   margin-top: 65px;
   text-align: center;
@@ -26,10 +34,11 @@
 }
 .invitacion {
   font-size: 20px; 
+  font-family: 'Diphylleia', serif;
 }
 .nombres {
-  font-size: 35px;
-  text-align: center;
+  font-size: 40px;
+  font-family: 'Sacramento', cursive;
 }
 .card-title-invitacion{
   text-align: center;
@@ -66,9 +75,14 @@
 }
 .fechanumero {
   font-size: 65px;
+  font-family: 'Fraunces', serif;
+}
+.reloj{
+  font-family: 'K2D', sans-serif;
 }
 .hora {
   font-size: 25px;
+  font-family: 'K2D', sans-serif;
 }
 .fecha {
   font-size: 65px;
@@ -79,7 +93,8 @@ span.recepcion {
   font-size: 25px;
 }
 span.recepcionLugar {
-  font-size: 50px;
+  font-size: 40px;
+  font-family: 'Diphylleia', serif;
 }
 button.btn.btn-outline-light {
   border-radius: 50px;
