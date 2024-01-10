@@ -103,9 +103,7 @@ span.recepcionLugar {
   /*font-family: 'Diphylleia', serif;*/
   font-family: 'Parisienne', cursive;
 }
-a.btn.btn-outline-light {
-  border-radius: 50px;
-}
+
 .imgBrindis 
 {
   height: 5rem;
@@ -114,7 +112,7 @@ a.btn.btn-outline-light {
 #dias, #horas, #minutos, #segundos {
   display: inline-block;
   padding: 5px 10px;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid rgb(77 32 32);
   border-radius: 5px;
   margin: 0 5px;
   font-size: 20px;
@@ -218,7 +216,7 @@ h5.menuCenaSubtitulo {
   margin: auto;
   padding: 50px;
   border-radius: 15px;
-  box-shadow: inset 0px 1px 20px 3px rgb(0 0 0);
+  box-shadow: inset 0px 1px 13px 0px rgb(77 32 32);
 }
 label {
   display: block;
@@ -291,6 +289,8 @@ button.btn.btn-light.confirma {
 a.btn.btn-outline-light {
   font-family: 'Diphylleia', serif;
   font-size: 1.10rem;
+  background-color: #4e0303;
+  border-radius: 50px;
 }
 
 p.metodoPago {
@@ -317,13 +317,29 @@ img.arriba {
 }
 
 .modal-body {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 
 .modal-header {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 
 .botonMenu {
   margin-bottom: 25px;
+}
+
+button.btn.btn-light.confirma {
+  font-family: 'Diphylleia', serif;
+  font-size: 1.10rem;
+  background-color: #4e0303;
+  border-radius: 50px;
+  color: white;
+}
+
+button.btn.btn-secondary {
+  font-family: 'Diphylleia', serif;
+  font-size: 1.10rem;
+  background-color: #4e0303;
+  border-radius: 50px;
+  color: white;
 }
