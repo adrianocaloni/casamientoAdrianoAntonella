@@ -315,3 +315,15 @@ img.arriba {
   margin-left: 50px;
   height: 280px;
 }
+
+.modal-body {
+  background-color: black;
+}
+
+.modal-header {
+  background-color: black;
+}
+
+.botonMenu {
+  margin-bottom: 25px;
+}
