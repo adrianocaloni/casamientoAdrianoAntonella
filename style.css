@@ -194,13 +194,13 @@ h1.menuCena {
 
 p.aclaracionMenuEspeciales {
   font-family: 'Diphylleia', serif;
-  font-size: 0.8rem;
+  font-size: 1.00rem;
   text-align: left;
 }
 
 h2.menuCena.menuEntradaTitulo {
   font-family: 'Parisienne', cursive;
-  font-size: 2.0rem;
+  font-size: 2.5rem;
 }
 
 h5.menuCenaSubtitulo {
@@ -217,8 +217,8 @@ h5.menuCenaSubtitulo {
   max-width: 600px;
   margin: auto;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: inset 0px 1px 18px 6px rgb(255 255 255 / 100%);
 }
 label {
   display: block;
@@ -253,7 +253,7 @@ button:hover {
 h2.elgranDiaLetras {
   font-family: 'Parisienne', cursive;
   font-size: 30px;
-  margin-top: 45px;
+  margin-top: 15px;
 }
 
 button.confirma {
@@ -296,4 +296,17 @@ a.btn.btn-outline-light {
 p.metodoPago {
   font-family: 'Diphylleia', serif;
   font-size: 2.0rem;
+}
+
+.col-6 {
+  text-align: center;
+}
+
+p.detallesMenu {
+  font-size: 1.2rem;
+  font-family: 'Diphylleia', serif;
+}
+
+p.valortarjeta {
+  font-size: 1.4rem;
 }
