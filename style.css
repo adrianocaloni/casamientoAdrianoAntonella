@@ -215,7 +215,7 @@ h5.menuCenaSubtitulo {
 
 .container-form {
   max-width: 600px;
-  margin-left: 15px;
+  margin: auto;
   padding: 50px;
   border-radius: 15px;
   box-shadow: inset 0px 1px 20px 3px rgb(0 0 0);
@@ -309,4 +309,9 @@ p.detallesMenu {
 
 p.valortarjeta {
   font-size: 1.4rem;
+}
+
+img.arriba {
+  margin-left: 50px;
+  height: 280px;
 }
