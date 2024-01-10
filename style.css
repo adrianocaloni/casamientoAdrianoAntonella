@@ -120,14 +120,14 @@ a.btn.btn-outline-light {
   font-size: 20px;
 }
 .circulo {
-  position: absolute; /* Establece la posición absoluta */
-  top: 50%; /* Centra verticalmente */
-  left: 60%; /* Centra horizontalmente */
-  transform: translate(-50%, -50%); /* Centra el punto central del círculo */
-  z-index: 1; /* Asegura que el texto esté sobre la imagen */
-  width: 220px;  /* Ajusta el ancho según lo necesites */
-  height: 220px; /* Ajusta la altura según lo necesites */
-  margin-top: 50px;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 450px;
+  height: 450px;
+  margin-top: 160px;
 }
 
 img.elgrandiaPasos {
@@ -174,7 +174,7 @@ h5.elgranDiaLetras {
 
 .complejoIglesia {
   font-family: 'EB Garamond', serif;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .teofilo{
@@ -199,9 +199,8 @@ p.aclaracionMenuEspeciales {
 }
 
 h2.menuCena.menuEntradaTitulo {
-  font-family: 'EB Garamond', serif;
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-family: 'Parisienne', cursive;
+  font-size: 2.0rem;
 }
 
 h5.menuCenaSubtitulo {
@@ -209,8 +208,8 @@ h5.menuCenaSubtitulo {
   font-size: 1.4rem;
 }
 .menuCenaValor {
-  font-family: 'EB Garamond', serif;
-  font-size: 1.5rem;
+  font-family: 'Diphylleia', serif;
+  font-size: 1.25rem;
   text-align: center;
 }
 
@@ -267,11 +266,34 @@ button.confirma {
 }
 
 .metodoPagoOpciones{
-  font-family: 'EB Garamond', serif;
-  font-size: 1.4rem;
+  font-family: 'Diphylleia', serif;
+  font-size: 1.6rem;
 }
 
 .metodoPagoCbu{
-  font-family: 'EB Garamond', serif;
+  font-family: 'Diphylleia', serif;
   font-size: 0.9rem;
+}
+
+.nombreApForm{
+  font-family: 'Parisienne', cursive;
+  font-size: 2.0rem;
+}
+.menuEspecial{
+  font-family: 'Diphylleia', serif;
+  font-size: 1.1rem;
+}
+button.btn.btn-light.confirma {
+  font-family: 'Diphylleia', serif;
+  font-size: 1.1rem;
+}
+
+a.btn.btn-outline-light {
+  font-family: 'Diphylleia', serif;
+  font-size: 1.10rem;
+}
+
+p.metodoPago {
+  font-family: 'Diphylleia', serif;
+  font-size: 2.0rem;
 }
