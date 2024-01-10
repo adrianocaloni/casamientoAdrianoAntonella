@@ -343,3 +343,9 @@ button.btn.btn-secondary {
   border-radius: 50px;
   color: white;
 }
+
+.frase{
+  font-family: 'Parisienne', cursive;
+  font-size: 1.8rem;
+  text-align: center;
+}
