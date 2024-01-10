@@ -216,9 +216,9 @@ h5.menuCenaSubtitulo {
 .container-form {
   max-width: 600px;
   margin: auto;
-  padding: 20px;
+  padding: 50px;
   border-radius: 15px;
-  box-shadow: inset 0px 1px 18px 6px rgb(255 255 255 / 100%);
+  box-shadow: inset 0px 1px 20px 3px rgb(0 0 0);
 }
 label {
   display: block;
