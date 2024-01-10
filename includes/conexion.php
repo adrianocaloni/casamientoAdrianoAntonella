@@ -13,9 +13,7 @@ if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }
 
-echo "¡Conexión exitosa!";
-
 // No es necesario cerrar la conexión inmediatamente después de establecerla.
 // $conn->close();
 
-?>
+?>  
