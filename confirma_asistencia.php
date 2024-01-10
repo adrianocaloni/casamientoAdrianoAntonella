@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $confirmar = $_POST['confirmar'] ?? '';
 
     // Insertar los datos en la base de datos
-    $sql = "INSERT INTO Personas (nombre, apellido, confirma, menuEspecial) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO personas (nombre, apellido, confirma, menuEspecial) VALUES (?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sssi", $nombre, $apellido, $confirmar, $menuEspecial);
     
