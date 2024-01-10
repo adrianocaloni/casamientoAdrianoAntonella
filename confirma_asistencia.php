@@ -21,7 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sssi", $nombre, $apellido, $confirmar, $menuEspecial);
     
     if ($stmt->execute()) {
-        echo "Datos insertados correctamente.";
+        // Redireccionar a la página de confirmación
+        header("Location: confirmacion.html");
+        exit(); // Finalizar el script después de redireccionar
     } else {
         echo "Error al insertar datos: " . $stmt->error;
     }
