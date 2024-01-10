@@ -100,7 +100,8 @@ span.recepcion {
 }
 span.recepcionLugar {
   font-size: 40px;
-  font-family: 'Diphylleia', serif;
+  /*font-family: 'Diphylleia', serif;*/
+  font-family: 'Parisienne', cursive;
 }
 a.btn.btn-outline-light {
   border-radius: 50px;
