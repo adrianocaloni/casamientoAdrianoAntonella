@@ -29,3 +29,8 @@ function actualizarContador() {
 
 // Actualizar el contador cada segundo
 setInterval(actualizarContador, 1000);
+
+function abrirInvitacion() {
+    // Reemplaza 'url_de_tu_invitacion' con la URL real de tu invitación de casamiento
+    window.location.href = 'tarjeta.html';
+  }

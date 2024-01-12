@@ -1,26 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="javascript.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
-    <title>Tarjeta Casamiento</title>
+<html lang="es">
+<head> 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="javascript.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+  <title>Invitación de Casamiento</title>
 </head>
 <body>
-    <header class="menuCasamiento">
-            <div class="texto-fijo">
-                <img class="circulo" src="dist/img/logo.png"  alt="nuestraboda">  
-            </div>
-    </header>
-    <section class="container mb-4">     
-        <p class ="invitacion">Te invitamos a ser parte de un capítulo inolvidable en nuestras vidas. Acompáñanos y comparte la alegría de este momento único en nuestro camino juntos. </p>
-    </section>
+  <hr class="linea-horizontal">
+    <div class="texto">
+        <p class="texto_principal">Casamiento</p>
+        <p class="texto_nombres">Adriano & Antonella</p>
+    </div>
 
+    <div class="sobre">
+      <div class="contenido">
+        <div class="linea-diagonal"></div>
+        <div class="boton" onclick="abrirInvitacion()">
+          <img class="imagen-abrir-sobre" src="dist/img/botonSobre.png" alt="Sobre">
+        </div>
+      </div>
+    </div>
+
+    
     <section>
-        <div class="container text-center">
+        <div class="container text-center fechanumeroSobre">
+         
             <div class="row">
                 <div class="mb-2">
                     <span class="fechanumero">14</span>
@@ -33,312 +41,25 @@
             </div>
         </div><br><br>
     </section>
+    <hr class="linea-horizontal">
 
-    <section>
-        <div class="koudfyb-galeri">
-            <div style="background-image: url('https://img.freepik.com/foto-gratis/novio-poniendo-anillo-dedo-novia_1157-338.jpg');"></div> 
-            <div style="background-image: url('https://img.freepik.com/foto-gratis/anillos-bodas-oro-rosa-blanca-ramo-boda_8353-10467.jpg');"></div> 
-            <div style="background-image: url('https://st3.depositphotos.com/13349494/18560/i/450/depositphotos_185606910-stock-photo-close-up-view-of-wedding.jpg');"></div> 
-        </div>
-    </section><br><br>
 
-    <section>
-        <div class="container text-center">
-            <div class="row">
-                    <div class="d-grid gap-2">
-                        <span class="recepcion"><img src="dist/img/church.png" class="imgBrindis" alt="brindis"></span>
-                        <span class="recepcionLugar">Ceremonia</span>
-                        <div class="row">
-                            <div class="mb-2">
-                                <span class="hora">07:00 P.M.</span><br><br>
-                            </div>
-                        </div>
-                        <span class="complejoIglesia">Proximamente...</span>
-                        <a href="https://www.google.com.ar/maps/place/Salon+Pampa/@-30.9941716,-64.111561,17z/data=!3m1!4b1!4m6!3m5!1s0x9432630bf417617b:0x151f6c581eda99c8!8m2!3d-30.9941763!4d-64.1066901!16s%2Fg%2F11dfkpnhpf?entry=ttu" target="_blank" class="btn btn-outline-light" type="button">VER UBICACIÓN</a>
-                    </div>
-            </div>
-        </div><br><br>
-    </section>
-
-    <section>
-        <div class="container text-center">
-            <div class="row">
-                    <div class="d-grid gap-2">
-                        <span class="recepcion"><img src="dist/img/brindis.png" class="imgBrindis" alt="brindis"></span>
-                        <span class="recepcionLugar">Recepción</span>
-                        <div class="row">
-                            <div class="mb-2">
-                                <span class="hora">09:00 P.M.</span>                                 
-                            </div>
-                        </div>
-                        <span class="complejoIglesia">PAMPA</span>
-                        <a href="https://www.google.com.ar/maps/place/Salon+Pampa/@-30.9941716,-64.111561,17z/data=!3m1!4b1!4m6!3m5!1s0x9432630bf417617b:0x151f6c581eda99c8!8m2!3d-30.9941763!4d-64.1066901!16s%2Fg%2F11dfkpnhpf?entry=ttu" target="_blank" class="btn btn-outline-light" type="button">VER UBICACIÓN</a>
-                    </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container text-center">
-            <div class="row">
-                <h5 class="elgranDiaLetras">El gran día</h5> 
-              <div class="col">
-                <img src="dist/img/bride.png" class="elgrandiaPasos" alt="brindis">
-              </div>
-              <div class="col">
-                <img src="dist/img/arrow-right.png" class="love" alt="brindis">
-              </div>
-              <div class="col">
-                <span class="pasos">CEREMONIA RELIGIOSA<br>07:00 P.M. </span>
-              </div>
-            </div><br>
-          <div class="row">
-            <div class="col">
-              <img src="dist/img/camera.png" class="elgrandiaPasos" alt="brindis">
-            </div>
-            <div class="col">
-                <img src="dist/img/arrow-left.png" class="love" alt="brindis">
-            </div>
-            <div class="col">
-                <span class="pasos">FOTOGRAFIAS<br> 08:00 P.M.</span>
-            </div>
-          </div><br>
-          <div class="row">
-            <div class="col">
-              <img src="dist/img/ceremony.png" class="elgrandiaPasos" alt="brindis">
-            </div>
-            <div class="col">
-                <img src="dist/img/arrow-right.png" class="love" alt="brindis">
-            </div>
-            <div class="col">
-                <span class="pasos">RECEPCIÓN<br> 09:00 P.M.</span>
-            </div>
-          </div><br>
-        <div class="row">
-            <div class="col">
-              <img src="dist/img/dance.png" class="elgrandiaPasos" alt="brindis">
-            </div>
-            <div class="col">
-                <img src="dist/img/arrow-left.png" class="love" alt="brindis">
-            </div>
-            <div class="col">
-                <span class="pasos">BAILE DE NOVIOS<br> 09:30 P.M</span>
-            </div>
-          </div><br>
-        <div class="row">
-            <div class="col">
-              <img src="dist/img/eat.png" class="elgrandiaPasos" alt="brindis">
-            </div>
-            <div class="col">
-                <img src="dist/img/arrow-right.png" class="love" alt="brindis">
-            </div>
-            <div class="col">
-                <span class="pasos">CENA<br> 10:00 P.M.</span>
-            </div>
-          </div><br>
-        <div class="row">
-            <div class="col">
-              <img src="dist/img/bouquet.png" class="elgrandiaPasos" alt="brindis">
-            </div>
-            <div class="col">
-                <img src="dist/img/arrow-left.png" class="love" alt="brindis">
-            </div>
-            <div class="col">
-                <span class="pasos">RAMO<br> 12:00 A.M.</span>
-            </div>
-          </div><br>
-        <div class="row">
-            <div class="col">
-              <img src="dist/img/dance (1).png" class="elgrandiaPasos" alt="brindis">
-            </div>
-            <div class="col">
-                <img src="dist/img/arrow-right.png" class="love" alt="brindis">
-            </div>
-            <div class="col">
-                <span class="pasos">FIESTA<br> 12:30 A.M.</span>
-            </div>
-          </div><br>
-          <div class="row">
-            <div class="col">
-              <img src="dist/img/the-end.png" class="elgrandiaPasos" alt="brindis">
-            </div>
-            <div class="col">
-                <img src="dist/img/arrow-left.png" class="love" alt="brindis">
-            </div>
-            <div class="col">
-                <span class="pasos">FIN<br> 05:00 A.M.</span>
-            </div>
-          </div>
-        </div><br>
-    </section>
-
-    <section>
-        <div class="container text-center">
-            <div class="row">
-                <h1 class="menuCena"> - MENÚ -</h1>
-               <!-- Button trigger modal -->
-               <div class="botonMenu"> 
-                    <button type="button" class="btn btn-light confirma" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Ver menú
-                    </button>    
-               </div>
-                <hr style="border-top: 5px solid black; width: 80%; margin: 20px auto;">
-                <div class="frase">
-                    <p>Tu presencia será nuestro mayor regalo. Nos encantaría que nos acompañes en este día especial.</p> 
-                </div>
-                <hr style="border-top: 5px solid black; width: 80%; margin: 20px auto;"> <br><br><br>
-                <div class="menuCenaValor">
-                    <p class="valortarjeta">Mayores: $35.000 | Menores: $17.500</p>
-                    <p class="aclaracionMenuEspeciales"> * 0 a 2 años sin cargo | 3 a 10 años media tarjeta | 11 años en adelante se abona
-                        tarjeta completa</p>
-                </div>                     
-            </div> 
-        </div>
-    </section><br><br>
-
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel"><h1 class="menuCena"> - MENÚ -</h1></h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <section>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="menuEntrada text-center">
-                            <h2 class="menuCena menuEntradaTitulo"> Entrada:</h2>
-                            <p class="detallesMenu"> 
-                                • Mix de bruschettas
-                                • Sándwich de miga.
-                                • Tablas de empanadas
-                                • Tablas de fiambres
-                                • Rebozados fritos
-                                • Variedad de pinchos
-                                • Escabechados
-                                • Cazuelas
-                            </p>
-                        </div>
-                        <div class="menuEntrada text-center">
-                            <h2 class="menuCena menuEntradaTitulo"> Plato principal:</h2>                  
-                            <p class="detallesMenu">
-                                • Colita de cuadril rellena con ciruelas y salsa de roquefort 
-                                • Vacío de vaca con crema de verdeo y guarnición
-                            </p>
-                        </div>
-                        <div class="menuEntrada text-center">
-                            <h2 class="menuCena menuEntradaTitulo"> Postre:</h2>
-                            <p class="detallesMenu">
-                                • Helado almendrado con trozos de brownie y frutos rojos.
-                            </p>
-                        </div>
-                        <div class="menuEntrada text-center">
-                            <h2 class="menuCena menuEntradaTitulo"> Torta y Mesas dulces:</h2>
-                            <p class="detallesMenu">
-                                • Petit fours
-                            </p>
-                        </div>
-                        <div class="menuEntrada text-center">
-                            <h2 class="menuCena menuEntradaTitulo"> Trasnoche:</h2>
-                            <p class="detallesMenu">
-                                • Sándwich de carne
-                                • Conos de fritas
-                            </p>
-                        </div>
-                        <div class="menuEntrada text-center">
-                            <h2 class="menuCena menuEntradaTitulo"> Barra de tragos:</h2>
-                            <p class="detallesMenu"> 
-                                • Fernet, gancia, cerveza, daiquiris de frutilla y durazno
-                            </p>
-                        </div>
-                        <div class="menuEntrada text-center">
-                            <h2 class="menuCena menuEntradaTitulo"> Bebidas</h2>
-                            <p class="detallesMenu">
-                                Vino Don Valentín malbec, y torrontes blanco, Línea Coca Cola
-                                (Coca, Sprite, Coca Zero) agua, agua saborizada de naranja y manzana,
-                                agua con gas.
-                            </p>
-                        </div>
-                        <p class="aclaracionMenuEspeciales"> * Se ofrecen opciones para celiacos, vegetarianos, y con alguna
-                                                            intolerancia en particular. Por favor, informa tus necesidades al confirmar tu asistencia.</p>       
-                    </div> 
-                </div>
-            </section>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-    <section class="tarjeta-cobro">
-        <div class="container">
-            <div class="row">
-                <div class="col-12"> 
-                    <h4 class="metodoPago-title">Métodos de pago:</h4>
-                    <p class="metodoPagoOpciones text-center">Transferencia | Efectivo</p>
-                </div>
-                <div class="col-6">
-                    <div class="row">
-                        <div class="col-12">
-                            <span class="metodoPagoCbu-name">Adriano Caloni - CBU:</span>
-                            <span class="metodoPagoCbu-number">0150506101000186017903</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="row">
-                        <div class="col-12">
-                            <span class="metodoPagoCbu-name">Antonella Almeida - CBU:</span>
-                            <span class="metodoPagoCbu-number">0720199488000038056718</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <br><br>
-    </section>
-
-<section>
-    <div class="container-form">
-        <h2 class="elgranDiaLetras">Confirmación de Asistencia</h2>
-        <p class ="invitacion">Por favor, confirma tu asistencia al casamiento completando el siguiente formulario.</p><br>
-        
-        <form action="confirma_asistencia.php" method="post">
-            <label for="nombre" class="nombreApForm" >Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-    
-            <label for="apellido" class="nombreApForm" >Apellido:</label>
-            <input type="text" id="apellido" name="apellido" required>
-    
-            <label class="menuEspecial">Opción de Menú Especial:</label>
-            <input type="checkbox" id="menuEspecial" name="menuEspecial" value="si">
-            <label for="menuEspecial">Sí</label>
-    
-            <div class="botonesFormulario">
-                <button type="submit" class="btn btn-light confirma" name="confirmar" value="si" style="flex: 1;">Confirmar</button>
-                <button type="submit" class="btn btn-light confirma" name="confirmar" value="no" style="flex: 1;">No Confirmar</button>
-            </div><br>
-            
-        </form>
-    </div>
-</section><br><br>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 <style>
-body {
-  background-color: #fcfcfc;
-  color: #4e0303;
-}
-.modal-footer {
-  background-color: rgb(255, 255, 255);
-}
+    body {
+   font-family: Arial, sans-serif;
+   background-color: #ffffff;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+ }
+
 </style>
-</div>
-  
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
 </body>
 </html>
