@@ -34,3 +34,28 @@ function abrirInvitacion() {
     // Reemplaza 'url_de_tu_invitacion' con la URL real de tu invitación de casamiento
     window.location.href = 'tarjeta.html';
   }
+
+
+    // Obtén el elemento del calendario
+  const calendar = document.getElementById('calendario');
+
+  // Función para crear el calendario
+  function createCalendar() {
+    const currentDate = new Date();
+    const currentMonth = currentDate.getMonth();
+    const daysInMonth = new Date(currentDate.getFullYear(), currentMonth + 1, 0).getDate();
+    const specialDay = 14; // Día especial
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const dayElement = document.createElement('div');
+      dayElement.classList.add('day');
+      dayElement.textContent = day;
+
+      // Marcar el día especial
+      if (day === specialDay) {
+        dayElement.classList.add('special-day');
+      }
+
+      calendar.appendChild(dayElement);
+    }
+  }

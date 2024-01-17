@@ -18,25 +18,6 @@ header.menuCasamiento {
   border-radius: 5px; /* Bordes redondeados */
 }
 
-.texto-fijoAyA {
-  font-family: 'Parisienne', cursive;
-  font-size: 35px;
-  margin-top: 110px;
-}
-
-.texto-curvo {
-  font-family: 'Parisienne', cursive;
-  font-size: 20px;
-  margin-top: 75px;
-  text-align: center;
-}
-.texto-curvo, .texto-fijoAyA {
-  text-shadow: 0 0 5px #fff, /* brillo blanco */
-               0 0 10px #fff, /* brillo más fuerte */
-               0 0 15px #861313, /* brillo de color (rosa en este caso) */
-               0 0 20px #861313; /* brillo más fuerte de color */
-}
-
 .invitacion {
   font-size: 20px; 
   font-family: 'Diphylleia', serif;
@@ -56,11 +37,6 @@ header.menuCasamiento {
 }
 .card.h-100 {
   background-color: rgb(168, 126, 126);
-}
-.card-body {
-  background-color: #4e0303;
-  border-radius: 1px;
-  font-style: oblique;
 }
 
 .koudfyb-galeri{
@@ -212,11 +188,15 @@ h5.menuCenaSubtitulo {
 }
 
 .container-form {
+  border-top: 1px dashed #4e0303;; /* Línea superior punteada */
+  border-bottom: 1px dashed #4e0303;; /* Línea inferior punteada */
+  border-right: 1px dashed#4e0303;; /* Línea inferior punteada */
+  border-left: 1px dashed #4e0303;; /* Línea inferior punteada */
+  padding: 20px;
+  width: 80%;
   max-width: 600px;
-  margin: auto;
-  padding: 50px;
-  border-radius: 15px;
-  box-shadow: inset 0px 1px 13px 0px rgb(77 32 32);
+  margin: 20px auto;
+  background-color: #fff; /* Fondo blanco */
 }
 label {
   display: block;
@@ -365,7 +345,7 @@ button.btn.btn-secondary {
 .contenido {
   width: 100%;
   height: 100%;
-  background-color: #800000; /* Color bordo (rojo oscuro) */
+  background-color: #4e0303; /* Color bordo (rojo oscuro) */
   border-radius: 20px; /* Forma del sobre */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombreado */
   position: absolute;
@@ -390,7 +370,9 @@ button.btn.btn-secondary {
   transform: translate(-50%, -50%);
 }
 img.imagen-abrir-sobre {
-height: 80px;
+margin-top: 15px;
+margin-bottom: 15px;
+height: 750px;
 }
 
 .linea-diagonal {
@@ -427,4 +409,9 @@ p.texto_principal {
   background-image: linear-gradient(to right, #4e0303 10%, #fff 10%, #fff 20%, #4e0303 20%, #4e0303 30%, #fff 30%, #fff 40%, #4e0303 40%, #4e0303 50%, #fff 50%, #fff 60%, #4e0303 60%, #4e0303 70%, #fff 70%, #fff 80%, #4e0303 80%, #4e0303 90%, #fff 90%, #fff 100%);
   width: 80%; /* Ajusta la longitud de la línea según tus necesidades */
   margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+
+.calendario {
+width: 500px;
 }
