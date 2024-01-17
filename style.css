@@ -330,45 +330,7 @@ button.btn.btn-secondary {
   text-align: center;
 }
 
-.sobre {
-  position: relative;
-  width: 300px; /* Ancho del sobre cerrado */
-  height: 310px; /* Alto del sobre cerrado */
-  cursor: pointer;
-  transition: transform 0.5s;
-}
 
-.sobre:hover {
-  transform: rotate(-10deg); /* Efecto de abrir el sobre al pasar el cursor */
-}
-
-.contenido {
-  width: 100%;
-  height: 100%;
-  background-color: #4e0303; /* Color bordo (rojo oscuro) */
-  border-radius: 20px; /* Forma del sobre */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombreado */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg); /* Inicialmente el contenido está cerrado */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.5s;
-  margin-top: 25px;
-}
-
-
-.boton {
-  cursor: pointer;
-  font-size: 16px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
 img.imagen-abrir-sobre {
 height: 80px;
 }
@@ -409,7 +371,22 @@ p.texto_principal {
   margin: 20px 0; /* Espaciado superior e inferior */
 }
 
-
 .calendario {
-width: 500px;
+width: 350px;
+margin-top: 25px;
+}
+
+img.sobrePrincipal {
+  width: 300px;
+  border-radius: 25px;
+}
+
+.sobrePrincipal {
+  width: 100px; /* Ajusta el ancho según tus necesidades */
+  height: auto; /* Mantén la proporción de la imagen */
+  transition: transform 0.3s ease; /* Agrega una transición suave al movimiento */
+}
+
+.sobrePrincipal:hover {
+  transform: scale(1.1); /* Ajusta el factor de escala según tus preferencias */
 }
