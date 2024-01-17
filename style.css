@@ -370,9 +370,7 @@ button.btn.btn-secondary {
   transform: translate(-50%, -50%);
 }
 img.imagen-abrir-sobre {
-margin-top: 15px;
-margin-bottom: 15px;
-height: 750px;
+height: 80px;
 }
 
 .linea-diagonal {
