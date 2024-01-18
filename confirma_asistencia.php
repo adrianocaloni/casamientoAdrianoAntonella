@@ -14,6 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $apellido = $_POST['apellido'] ?? '';
     $menuEspecial = isset($_POST['menuEspecial']) ? 1 : 0; // Convertir el valor del checkbox a 1 o 0
     $confirmar = $_POST['confirmar'] ?? '';
+    
+
 
     // Insertar los datos en la base de datos
     $sql = "INSERT INTO personas (nombre, apellido, confirma, menuEspecial) VALUES (?, ?, ?, ?)";
@@ -21,13 +23,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sssi", $nombre, $apellido, $confirmar, $menuEspecial);
     
     if ($stmt->execute()) {
-        // Redireccionar a la página de confirmación
-        header("Location: confirmacion.html");
-        exit(); // Finalizar el script después de redireccionar
+        if ($confirmar == 'si'){
+            // Redireccionar a la página de confirmación
+            header("Location: confirmacion.html");
+            exit(); // Finalizar el script después de redireccionar
+        } else {
+            // Redireccionar a la página de inicio
+            header("Location: noconfirma.html");
+            exit(); // Finalizar el script después de redireccionar
+        }
     } else {
         echo "Error al insertar datos: " . $stmt->error;
     }
-
+    
     // Cerrar la conexión
     $stmt->close();
     $conn->close();

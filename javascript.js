@@ -35,27 +35,18 @@ function abrirInvitacion() {
     window.location.href = 'tarjeta.html';
   }
 
-
-    // Obtén el elemento del calendario
-  const calendar = document.getElementById('calendario');
-
-  // Función para crear el calendario
-  function createCalendar() {
-    const currentDate = new Date();
-    const currentMonth = currentDate.getMonth();
-    const daysInMonth = new Date(currentDate.getFullYear(), currentMonth + 1, 0).getDate();
-    const specialDay = 14; // Día especial
-
-    for (let day = 1; day <= daysInMonth; day++) {
-      const dayElement = document.createElement('div');
-      dayElement.classList.add('day');
-      dayElement.textContent = day;
-
-      // Marcar el día especial
-      if (day === specialDay) {
-        dayElement.classList.add('special-day');
+  document.addEventListener('DOMContentLoaded', function() {
+    var textoNombres = document.querySelector('.texto_nombres');
+    var texto = textoNombres.textContent;
+    textoNombres.textContent = '';
+  
+    var index = 0;
+    var intervalo = setInterval(function() {
+      if (index < texto.length) {
+        textoNombres.textContent += texto[index];
+        index++;
+      } else {
+        clearInterval(intervalo);
       }
-
-      calendar.appendChild(dayElement);
-    }
-  }
+    }, 130); // Puedes ajustar el intervalo de tiempo según tus preferencias
+  });

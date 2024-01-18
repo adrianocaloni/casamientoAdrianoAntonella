@@ -354,9 +354,6 @@ p.texto_nombres {
   font-size: 30px;
 }
 
-p.texto_principal {
-  font-size: 60px;
-}
 
 .container.text-center.fechanumeroSobre {
   margin-top: 100px;
@@ -373,12 +370,13 @@ p.texto_principal {
 
 .calendario {
 width: 350px;
-margin-top: 25px;
+margin-top: 35px;
 }
 
 img.sobrePrincipal {
   width: 300px;
   border-radius: 25px;
+  margin-top: 15px;
 }
 
 .sobrePrincipal {
@@ -392,7 +390,7 @@ img.sobrePrincipal {
 }
 
 .cardenvio{
-  margin-top: 250px;
+  margin-top: 200px;
 }
 .card-body.cardBody {
   padding: 50px;
@@ -416,4 +414,20 @@ a.btn.btn-primary.botonVolver {
   background-color: #4e0303;
   font-family: 'Diphylleia', serif;
   font-size: 1.1rem;
+}
+
+.texto_principal {
+  opacity: 0; /* Inicialmente establece la opacidad en 0 para que esté oculto */
+  animation: aparecer 5.8s forwards; /* 1.5 segundos de duración */
+  font-size: 60px;
+  margin-top: 35px;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 15;
+  }
 }
