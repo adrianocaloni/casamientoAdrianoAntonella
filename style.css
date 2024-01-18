@@ -19,7 +19,7 @@ header.menuCasamiento {
 }
 
 .invitacion {
-  font-size: 20px; 
+  font-size: 15px; 
   font-family: 'Diphylleia', serif;
 }
 .nombres {
@@ -230,7 +230,7 @@ button:hover {
 
 h2.elgranDiaLetras {
   font-family: 'Parisienne', cursive;
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 15px;
 }
 
@@ -389,4 +389,31 @@ img.sobrePrincipal {
 
 .sobrePrincipal:hover {
   transform: scale(1.1); /* Ajusta el factor de escala según tus preferencias */
+}
+
+.cardenvio{
+  margin-top: 250px;
+}
+.card-body.cardBody {
+  padding: 50px;
+}
+
+
+h4.tituloConfirma {
+  /* font-family: 'Diphylleia', serif; */
+  font-family: 'Parisienne', cursive;
+  font-size: 1.6rem;
+}
+
+p.card-text.textoConfirma {
+  color: #4e0303;
+  font-family: 'Diphylleia', serif;
+  font-size: 1.4rem;
+}
+
+a.btn.btn-primary.botonVolver {
+  color: #ffffff;
+  background-color: #4e0303;
+  font-family: 'Diphylleia', serif;
+  font-size: 1.1rem;
 }
