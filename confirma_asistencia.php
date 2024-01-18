@@ -1,8 +1,9 @@
 <?php
+
+include('includes/conexion.php');
 // Verificar si se han enviado datos del formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Conectar a la base de datos
-    $conn = new mysqli('localhost', 'c2271752_invIt_A', '81deNAdoto', 'c2271752_invIt_A');
 
     // Verificar la conexión
     if ($conn->connect_error) {
