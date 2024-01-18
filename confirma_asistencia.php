@@ -24,6 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sssi", $nombre, $apellido, $confirmar, $menuEspecial);
     
     if ($stmt->execute()) {
+        header("Location: confirmacion.html");
+        ini_set('display_errors', 1);
+        exit(); // Finalizar el script después de redireccionar
+
         if ($confirmar == 'si'){
             // Redireccionar a la página de confirmación
             header("Location: confirmacion.html");
