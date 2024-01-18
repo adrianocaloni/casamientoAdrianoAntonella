@@ -27,10 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($confirmar == 'si'){
             // Redireccionar a la página de confirmación
             header("Location: confirmacion.html");
+            ini_set('display_errors', 1);
             exit(); // Finalizar el script después de redireccionar
         } else {
             // Redireccionar a la página de inicio
             header("Location: noconfirma.html");
+            ini_set('display_errors', 1);
             exit(); // Finalizar el script después de redireccionar
         }
     } else {
