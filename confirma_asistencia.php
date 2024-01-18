@@ -1,6 +1,6 @@
 <?php
 
-include('includes/conexion.php');
+include('includes/config/conexion.php');
 // Verificar si se han enviado datos del formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Conectar a la base de datos

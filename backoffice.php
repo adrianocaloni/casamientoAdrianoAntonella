@@ -13,7 +13,7 @@
 
 <?php
 // Incluir el archivo de conexión a la base de datos
-include('includes/conexion.php');
+include('includes/config/conexion.php');
 
 // Consulta SQL para obtener datos (sustituye con tu propia consulta)
 $sql = "SELECT * FROM personas";
