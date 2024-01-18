@@ -16,7 +16,7 @@
 include('includes/conexion.php');
 
 // Consulta SQL para obtener datos (sustituye con tu propia consulta)
-$sql = "SELECT * FROM personas WHERE id = 17";
+$sql = "SELECT * FROM personas";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
