@@ -416,6 +416,7 @@ a.btn.btn-primary.botonVolver {
   font-size: 1.1rem;
 }
 
+
 .texto_principal {
   opacity: 0; /* Inicialmente establece la opacidad en 0 para que esté oculto */
   animation: aparecer 5.8s forwards; /* 1.5 segundos de duración */

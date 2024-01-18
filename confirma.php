@@ -23,9 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $menuEspecial = isset($_POST['menuEspecial']) ? 1 : 0; // Convertir el valor del checkbox a 1 o 0
         $confirmar = $_POST['confirmar'] ?? '';
 
-        // Validar y sanitizar los datos (Ejemplo: podrías usar funciones como mysqli_real_escape_string o prepared statements)
-        // ...
-
         // Insertar los datos en la base de datos
         $sql = "INSERT INTO personas (nombre, apellido, confirma, menuEspecial) VALUES (?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
@@ -55,8 +52,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error: " . $e->getMessage();
     } finally {
         // Cerrar la conexión
-        if (isset($conn)) {
+        if (isset($stmt)) {
             $stmt->close();
+        }
+        if (isset($conn)) {
             $conn->close();
         }
     }
