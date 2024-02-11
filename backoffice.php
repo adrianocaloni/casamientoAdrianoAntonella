@@ -48,17 +48,47 @@ if ($result->num_rows > 0) {
 
 // Consulta SQL para obtener datos (sustituye con tu propia consulta)
 $sql2 = "SELECT * FROM personas WHERE menuEspecial = 1 AND confirma = 'si'";
-$result = $conn->query($sql2);
+$result2 = $conn->query($sql2);
 
-if ($result->num_rows > 0) {
+if ($result2->num_rows > 0) {
     // Imprimir los datos en una tabla
-    echo "<table border='1'>
+    
+    echo "
+    <p> Menú especial </p>
+    <table border='1'>
         <tr>
             <th>Nombre</th>
             <th>Apellido</th>
         </tr>";
 
-    while ($row = $result->fetch_assoc()) {
+    while ($row = $result2->fetch_assoc()) {
+        echo "<tr>
+            <td>" . $row['nombre'] . "</td>
+            <td>" . $row['apellido'] . "</td>
+        </tr>";
+    }
+
+    echo "</table>";
+    
+} else {
+    echo "0 resultados";
+}
+
+// Consulta SQL para obtener datos (sustituye con tu propia consulta)
+$sql3 = "SELECT * FROM personas WHERE menuEspecial = 0 AND confirma = 'si'";
+$result3 = $conn->query($sql3);
+
+if ($result3->num_rows > 0) {
+    // Imprimir los datos en una tabla
+    echo "
+    <p> Menú común </p>
+    <table border='1'>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>";
+
+    while ($row = $result3->fetch_assoc()) {
         echo "<tr>
             <td>" . $row['nombre'] . "</td>
             <td>" . $row['apellido'] . "</td>
