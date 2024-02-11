@@ -100,6 +100,28 @@ if ($result3->num_rows > 0) {
 } else {
     echo "0 resultados";
 }
+
+// Cantidad de invitados
+$sql4= "SELECT COUNT(*) AS cantidadInvitados FROM personas WHERE  confirma = 'si'";
+$result4 = $conn->query($sql3);
+
+if ($result4->num_rows > 0) {
+echo"
+<p> Cantidad invitados: ";
+
+while ($row = $result3->fetch_assoc()) {
+    echo "<p>" . cantidadInvitados . "</p>";
+}
+
+echo "</p>";
+    
+} else {
+    echo "0 resultados";
+}
+
+
+
+
 // Cerrar la conexión a la base de datos
 $conn->close();
 ?>
