@@ -24,7 +24,6 @@ if ($result->num_rows > 0) {
     echo "<table border='1'>
         <tr>
             <th>Nombre completo</th>
-            <th>Apellido</th>
             <th>Confirma</th>
             <th>Menú especial</th>
             <th>Adulto | Niño <th>
