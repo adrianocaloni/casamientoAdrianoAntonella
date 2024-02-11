@@ -16,7 +16,7 @@
 include('includes/config/conexion.php');
 
 // Consulta SQL para obtener datos (sustituye con tu propia consulta)
-$sql = "SELECT * FROM personas";
+$sql = "SELECT * FROM personas WHERE confirma = 'si'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -24,7 +24,6 @@ if ($result->num_rows > 0) {
     echo "<table border='1'>
         <tr>
             <th>Nombre completo</th>
-            <th>Confirma</th>
             <th>Menú especial</th>
             <th>Adulto | Niño <th>
             <th>Comentario</th>
@@ -35,7 +34,6 @@ if ($result->num_rows > 0) {
         $nombreCompleto = $row['nombre'] . " " . $row['apellido'];
         echo "<tr>
             <td>" . $nombreCompleto . "</td>
-            <td>" . $row['confirma'] . "</td>
             <td>" . $row['menuEspecial'] . "</td>
             <td>
             <select>
