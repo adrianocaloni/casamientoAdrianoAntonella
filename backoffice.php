@@ -23,19 +23,19 @@ if ($result->num_rows > 0) {
     // Imprimir los datos en una tabla
     echo "<table border='1'>
         <tr>
-            <th>ID</th>
-            <th>Nombre</th>
+            <th>Nombre completo</th>
             <th>Apellido</th>
             <th>Confirma</th>
             <th>Menú especial</th>
             <th>Adulto | Niño <th>
+            <th>Comentario</th>
         </tr>";
 
     while ($row = $result->fetch_assoc()) {
+        // Concatenar nombre y apellido
+        $nombreCompleto = $row['nombre'] . " " . $row['apellido'];
         echo "<tr>
-            <td>" . $row['id'] . "</td>
-            <td>" . $row['nombre'] . "</td>
-            <td>" . $row['apellido'] . "</td>
+            <td>" . $nombreCompleto . "</td>
             <td>" . $row['confirma'] . "</td>
             <td>" . $row['menuEspecial'] . "</td>
             <td>
@@ -44,11 +44,16 @@ if ($result->num_rows > 0) {
                 <option value='nino'>Niño</option>
             </select>
             <td>
+            <td>
+                <input type='text' name='comentario'>
+            </td>
         </tr>";
     }
 
     echo "</table>";
     
+     // Agregar el botón "Guardar"
+     echo "<br><button type='submit'>Guardar</button>";
 } else {
     echo "0 resultados";
 }
