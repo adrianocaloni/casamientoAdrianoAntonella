@@ -46,6 +46,30 @@ if ($result->num_rows > 0) {
     echo "0 resultados";
 }
 
+// Consulta SQL para obtener datos (sustituye con tu propia consulta)
+$sql2 = "SELECT * FROM personas WHERE menuEspecial = 1 AND confirma = 'si'";
+$result = $conn->query($sql2);
+
+if ($result->num_rows > 0) {
+    // Imprimir los datos en una tabla
+    echo "<table border='1'>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>";
+
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr>
+            <td>" . $row['nombre'] . "</td>
+            <td>" . $row['apellido'] . "</td>
+        </tr>";
+    }
+
+    echo "</table>";
+    
+} else {
+    echo "0 resultados";
+}
 // Cerrar la conexión a la base de datos
 $conn->close();
 ?>
