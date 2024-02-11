@@ -50,3 +50,13 @@ function abrirInvitacion() {
       }
     }, 130); // Puedes ajustar el intervalo de tiempo según tus preferencias
   });
+
+  // Mostrar el popup al cargar la página
+window.onload = function() {
+  document.getElementById("popup").style.display = "block";
+}
+
+// Función para cerrar el popup
+function cerrarPopup() {
+  document.getElementById("popup").style.display = "none";
+}

@@ -432,3 +432,37 @@ a.btn.btn-primary.botonVolver {
     opacity: 15;
   }
 }
+ /* Estilos para el popup */
+.popup {
+  display: none; /* Por defecto oculto */
+  position: fixed; /* Permite que el popup flote sobre el contenido */
+  z-index: 1; /* Sitúa el popup por encima del resto del contenido */
+  left: 0;
+  top: 0;
+  width: 100%; /* Cubre toda la pantalla */
+  height: 100%;
+  overflow: auto; /* Habilita el desplazamiento si el contenido es demasiado grande */
+  background-color: rgba(0,0,0,0.5); /* Fondo oscuro con opacidad */
+}
+
+      /* Estilos para el contenido del popup */
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* Centra el popup verticalmente */
+  padding: 20px;
+  border: 1px solid #4e0303;
+  border-radius: 10px;
+  width: 80%; /* Ancho del popup */
+  text-align: center;
+}
+
+p.inicio-popup {
+  text-align: left;
+  font-family: 'Diphylleia', serif;
+  font-size: 1.2rem;
+}
+
+p.mensaje-popup {
+  font-family: 'Diphylleia', serif;
+  font-size: 1.2rem;
+}
