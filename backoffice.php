@@ -28,6 +28,7 @@ if ($result->num_rows > 0) {
             <th>Apellido</th>
             <th>Confirma</th>
             <th>Menú especial</th>
+            <th>Adulto | Niño <th>
         </tr>";
 
     while ($row = $result->fetch_assoc()) {
@@ -37,6 +38,12 @@ if ($result->num_rows > 0) {
             <td>" . $row['apellido'] . "</td>
             <td>" . $row['confirma'] . "</td>
             <td>" . $row['menuEspecial'] . "</td>
+            <td>
+            <select>
+                <option value='adulto'>Adulto</option>
+                <option value='nino'>Niño</option>
+            </select>
+            <td>
         </tr>";
     }
 
