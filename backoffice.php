@@ -110,7 +110,7 @@ echo"
 <p> Cantidad invitados: ";
 
 while ($row = $result3->fetch_assoc()) {
-    echo "<p>" . cantidadInvitados . "</p>";
+    echo "<p>" . $row["cantidadInvitados"] . "</p>";
 }
 
 echo "</p>";
