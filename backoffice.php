@@ -81,7 +81,7 @@ $conn->close();
     include('includes/config/conexion.php');
 
     // Consulta SQL para obtener datos
-    $sql = "SELECT * FROM personas WHERE adulto_menor IS NULL AND confirma = 'si'";
+    $sql = "SELECT * FROM personas WHERE confirma = 'si' AND adulto_menor IS NULL OR adulto_menor = 0";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -127,7 +127,7 @@ $conn->close();
     include('includes/config/conexion.php');
 
     // Consulta SQL para obtener datos
-    $sql2 = "SELECT * FROM personas WHERE menuEspecial = 1 AND confirma = 'si' AND menuEspecial IS NULL";
+    $sql2 = "SELECT * FROM personas WHERE menuEspecial = 1 AND confirma = 'si'";
     $result2 = $conn->query($sql2);
 
     if ($result2->num_rows > 0) {
