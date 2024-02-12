@@ -15,110 +15,58 @@
 // Incluir el archivo de conexión a la base de datos
 include('includes/config/conexion.php');
 
-// Consulta SQL para obtener datos (sustituye con tu propia consulta)
-$sql = "SELECT * FROM personas WHERE confirma = 'si'";
+// Consulta SQL para obtener datos de personas y sus valores de tarjeta
+$sql = "SELECT p.nombre, p.apellido, p.menuEspecial, p.adulto_menor, vt.valor_uno, tm.descripcion
+        FROM personas AS p
+        INNER JOIN valor_tarjeta AS vt ON vt.id = p.adulto_menor
+        LEFT JOIN tipo_menu AS tm ON tm.id = p.id_tipo_menu
+        WHERE p.confirma = 'si'";
+
 $result = $conn->query($sql);
+
+// Inicializar variables para sumatoria y conteo
+$total_valor_uno = 0;
+$cantidad_invitados = 0;
+
 
 if ($result->num_rows > 0) {
     // Imprimir los datos en una tabla
-    echo "<table border='1'>
-        <tr>
-            <th>Nombre completo</th>
-            <th>Menú especial</th>
-            <th>Adulto | Niño <th>
-            <th>Comentario</th>
-        </tr>";
+    echo "<table class='table table-striped'>
+            <thead>
+                <th>Nombre</th>
+                <th>Menú especial</th>
+                <th>Tipo Menú</th>
+                <th>Persona</th>
+                <th>Valor</th>        
+            </thead>";
 
     while ($row = $result->fetch_assoc()) {
         // Concatenar nombre y apellido
         $nombreCompleto = $row['nombre'] . " " . $row['apellido'];
         echo "<tr>
-            <td>" . $nombreCompleto . "</td>
-            <td>" . $row['menuEspecial'] . "</td>
-            <td>
-            <select>
-                <option value='adulto'>Adulto</option>
-                <option value='nino'>Niño</option>
-            </select>
-            <td>
-            <td>
-                <input type='text' name='comentario'>
-            </td>
-        </tr>";
-    }
+                <td>$nombreCompleto</td>
+                <td>";
+        // Verificar si menuEspecial es "si" o "no" y mostrar el texto correspondiente
+        echo ($row['menuEspecial'] == '1') ? "Sí" : "No";
+        echo "</td>
+                <td>{$row['descripcion']}</td>           
+                <td>";
+        // Generar opciones para las personas (ADULTO - MENOR)
+        echo ($row['adulto_menor'] == '1') ? "Adulto" : "Niño";
+        echo "</td>
+                <td>{$row['valor_uno']}</td>
+              </tr>";
+         // Sumar el valor_uno al total
+        $total_valor_uno += $row['valor_uno'];
 
+        // Contar el número de invitados
+        $cantidad_invitados++;
+    }
     echo "</table>";
-    
-     // Agregar el botón "Guardar"
-     echo "<br><button type='submit'>Guardar</button>";
-} else {
-    echo "0 resultados";
-}
+    // Imprimir la sumatoria total de valor_uno y la cantidad de invitados
+     echo "<p style='text-align: right;'><b>Total $:</b> $total_valor_uno</p>";
+     echo "<p style='text-align: right;'><b>Cantidad de invitados:</b> $cantidad_invitados</p>";
 
-// Consulta SQL para obtener datos (sustituye con tu propia consulta)
-$sql2 = "SELECT * FROM personas WHERE menuEspecial = 1 AND confirma = 'si'";
-$result2 = $conn->query($sql2);
-
-if ($result2->num_rows > 0) {
-    // Imprimir los datos en una tabla
-    
-    echo "
-    <p> Menú especial </p>
-    <table border='1'>
-        <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-        </tr>";
-
-    while ($row = $result2->fetch_assoc()) {
-        echo "<tr>
-            <td>" . $row['nombre'] . "</td>
-            <td>" . $row['apellido'] . "</td>
-        </tr>";
-    }
-
-    echo "</table>";
-    
-} else {
-    echo "0 resultados";
-}
-
-// Consulta SQL para obtener datos (sustituye con tu propia consulta)
-$sql3 = "SELECT * FROM personas WHERE menuEspecial = 0 AND confirma = 'si'";
-$result3 = $conn->query($sql3);
-
-if ($result3->num_rows > 0) {
-    // Imprimir los datos en una tabla
-    echo "
-    <p> Menú común </p>
-    <table border='1'>
-        <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-        </tr>";
-
-    while ($row = $result3->fetch_assoc()) {
-        echo "<tr>
-            <td>" . $row['nombre'] . "</td>
-            <td>" . $row['apellido'] . "</td>
-        </tr>";
-    }
-
-    echo "</table>";
-    
-} else {
-    echo "0 resultados";
-}
-
-// Cantidad de invitados
-$sql4= "SELECT COUNT(*) AS cantidadInvitados FROM personas WHERE  confirma = 'si'";
-$result4 = $conn->query($sql4);
-
-if ($result4->num_rows > 0) {
-    // Mostrar la cantidad de invitados
-    while ($row = $result4->fetch_assoc()) {
-        echo "<p>Cantidad de invitados: " . $row["cantidadInvitados"] . "</p>";
-    }
 } else {
     echo "0 resultados";
 }
@@ -127,5 +75,98 @@ if ($result4->num_rows > 0) {
 $conn->close();
 ?>
 
+<form action="carga_adulto_menor.php" method="post">
+    <?php
+    // Incluir el archivo de conexión a la base de datos
+    include('includes/config/conexion.php');
+
+    // Consulta SQL para obtener datos
+    $sql = "SELECT * FROM personas WHERE adulto_menor IS NULL AND confirma = 'si'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Imprimir los datos en una tabla
+        echo "
+        <table class='table table-striped'>
+            <thead>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Adulto | Menor</th>
+            </thead>";
+
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr>
+                <td>" . $row['id'] . "</td>
+                <td>" . $row['nombre'] . "</td>
+                <td>" . $row['apellido'] . "</td>
+                <td>
+                    <select name='tipo_persona[]'>
+                        <option value='0'>-</option>
+                        <option value='1'>Adulto</option>
+                        <option value='2'>Menor</option>
+                    </select>
+                    <!-- Campo oculto para enviar el ID de la persona -->
+                    <input type='hidden' name='id_persona[]' value='" . $row['id'] . "'>
+                </td>
+            </tr>";
+        }
+
+        echo "</table>";
+         // Agregar el botón "Guardar"
+         echo "<br><button type='submit' class='btn btn-secondary backoffice'>Guardar</button> <br><br>";
+    } else {
+        echo "Personas pendientes de cargar: 0";
+    }
+    ?>
+</form>
+
+<form action="carga_tipo_especial.php" method="post">
+    <?php
+    // Incluir el archivo de conexión a la base de datos
+    include('includes/config/conexion.php');
+
+    // Consulta SQL para obtener datos
+    $sql2 = "SELECT * FROM personas WHERE menuEspecial = 1 AND confirma = 'si' AND menuEspecial IS NULL";
+    $result2 = $conn->query($sql2);
+
+    if ($result2->num_rows > 0) {
+        // Imprimir los datos en una tabla
+        echo "
+        <table class='table table-striped'>
+            <thead>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Tipo Menú</th>
+            </thead>";
+
+        while ($row = $result2->fetch_assoc()) {
+            echo "<tr>
+                <td>" . $row['id'] . "</td>
+                <td>" . $row['nombre'] . "</td>
+                <td>" . $row['apellido'] . "</td>
+                <td>
+                    <select name='tipo_menu[]'>
+                        <option value='0'>-</option>
+                        <option value='1'>Celíaco</option>
+                        <option value='2'>Sin Gluten</option>
+                        <option value='3'>Vegetariano</option>
+                        <option value='4'>Vegano</option>
+                    </select>
+                    <!-- Campo oculto para enviar el ID de la persona -->
+                    <input type='hidden' name='id_persona[]' value='" . $row['id'] . "'>
+                </td>
+            </tr>";
+        }
+
+        echo "</table>";
+         // Agregar el botón "Guardar"
+         echo "<br><button type='submit' class='btn btn-secondary backoffice'>Guardar</button> <br><br>";
+    } else {
+        echo "Personas con Menú Espacial: 0";
+    }
+    ?>
+</form>
 </body>
 </html>
