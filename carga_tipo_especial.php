@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         foreach($_POST['tipo_menu'] as $index => $tipoMenuSeleccionado) {
             $id_persona = $_POST['id_persona'][$index];
             // Actualizar la tabla de personas con el tipo de menú seleccionado
-            $sql_actualizar = "UPDATE personas SET id_tipo_menu = ? WHERE id = ? AND confirma = 'si' AND menuEspecial = 1";
+            $sql_actualizar = "UPDATE personas SET id_tipo_menu = ? WHERE id = ? AND confirma = 'si' AND menuEspecial = 1 AND id_tipo_menu IS NULL";
             $stmt = $conn->prepare($sql_actualizar);
             $stmt->bind_param("ii", $tipoMenuSeleccionado, $id_persona);
             $stmt->execute();
