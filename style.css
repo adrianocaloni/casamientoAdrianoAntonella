@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
 
 header.menuCasamiento {
   margin-top: 280px;
@@ -17,26 +18,11 @@ header.menuCasamiento {
   padding: 10px 20px; /* Espaciado interno */
   border-radius: 5px; /* Bordes redondeados */
 }
-
-.invitacion {
-  font-size: 15px; 
-  font-family: 'Diphylleia', serif;
-}
-.nombres {
-  font-size: 40px;
-  font-family: 'Sacramento', cursive;
-  text-align: center;
-}
-.card-title-invitacion{
-  text-align: center;
-  font-size: 35px; 
-}
-.invitacionPrecentacion{
-  font-style: oblique;
-  font-size: 20px;
-}
-.card.h-100 {
-  background-color: rgb(168, 126, 126);
+p.invitacion {
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 23px;
 }
 
 .koudfyb-galeri{
@@ -75,9 +61,11 @@ span.recepcion {
   font-size: 25px;
 }
 span.recepcionLugar {
-  font-size: 40px;
-  /*font-family: 'Diphylleia', serif;*/
-  font-family: 'Parisienne', cursive;
+  font-size: 50px;
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+
 }
 
 .imgBrindis 
@@ -140,8 +128,10 @@ img.love {
 }
 
 h5.elgranDiaLetras {
-  font-family: 'Parisienne', cursive;
-  font-size: 55px;
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 65px;
   margin-top: 45px;
   margin-bottom: 45px;
 }
@@ -173,8 +163,10 @@ p.aclaracionMenuEspeciales {
 }
 
 h2.menuCena.menuEntradaTitulo {
-  font-family: 'Parisienne', cursive;
-  font-size: 2.5rem;
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.8rem;
 }
 
 h5.menuCenaSubtitulo {
@@ -229,8 +221,10 @@ button:hover {
 }
 
 h2.elgranDiaLetras {
-  font-family: 'Parisienne', cursive;
-  font-size: 25px;
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
   margin-top: 15px;
 }
 
@@ -248,14 +242,11 @@ button.confirma {
   font-size: 1.6rem;
 }
 
-.metodoPagoCbu{
-  font-family: 'Diphylleia', serif;
-  font-size: 0.9rem;
-}
-
 .nombreApForm{
-  font-family: 'Parisienne', cursive;
-  font-size: 2.0rem;
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
 }
 .menuEspecial{
   font-family: 'Diphylleia', serif;
@@ -273,11 +264,6 @@ a.btn.btn-outline-light {
   border-radius: 50px;
 }
 
-p.metodoPago {
-  font-family: 'Diphylleia', serif;
-  font-size: 2.0rem;
-}
-
 .col-6 {
   text-align: center;
 }
@@ -285,10 +271,6 @@ p.metodoPago {
 p.detallesMenu {
   font-size: 1.2rem;
   font-family: 'Diphylleia', serif;
-}
-
-p.valortarjeta {
-  font-size: 1.4rem;
 }
 
 img.arriba {
@@ -325,8 +307,10 @@ button.btn.btn-secondary {
 }
 
 .frase{
-  font-family: 'Parisienne', cursive;
-  font-size: 1.8rem;
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6rem;
   text-align: center;
 }
 
@@ -346,7 +330,9 @@ height: 80px;
   
 }
 .texto {
-  font-family: 'Parisienne', cursive;
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
    color: #4e0303;
 }
 
@@ -401,9 +387,12 @@ img.sobreAbrir {
 }
 
 .sobreAbrir {
-  height: auto; /* Mantén la proporción de la imagen */
   transition: transform 0.3s ease; /* Agrega una transición suave al movimiento */
+  max-width: 100%; /* Asegura que la imagen no supere el ancho del contenedor */
+  height: auto; /* Mantiene la relación de aspecto */
 }
+
+
 
 .sobreAbrir:hover {
   transform: scale(1.1); /* Ajusta el factor de escala según tus preferencias */
@@ -418,8 +407,10 @@ img.sobreAbrir {
 
 h4.tituloConfirma {
   /* font-family: 'Diphylleia', serif; */
-  font-family: 'Parisienne', cursive;
-  font-size: 1.6rem;
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.0rem;
 }
 
 p.card-text.textoConfirma {
@@ -479,8 +470,10 @@ a.btn.btn-primary.botonVolver {
 
 p.inicio-popup {
   text-align: left;
-  font-family: 'Diphylleia', serif;
-  font-size: 1.2rem;
+  font-size: 2.3rem;
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 p.mensaje-popup {
@@ -488,4 +481,42 @@ p.mensaje-popup {
   font-size: 1.2rem;
 }
 
+#loader {
+  width: 150px; /* Ancho de la barra de carga */
+  height: 120px; /* Altura de la barra de carga */
+  margin-top: 95px; /* Ajuste de margen superior */
+  background-image: url('dist/img/anillos.png'); /* Ruta de la imagen */
+  background-size: cover; /* Ajustar tamaño de la imagen */
+  background-position: center; /* Centrar la imagen */
+  animation: spin 1s linear infinite;
+}
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+h4.metodoPago-title {
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+}
+
+p.valortarjeta {
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+}
+span.metodoPagoCbu-name {
+  /* font-family: 'Diphylleia', serif; */
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 26px;
+}
+span.metodoPagoCbu-number {
+  font-family: 'Diphylleia', serif;
+  font-size: 15px;
+}

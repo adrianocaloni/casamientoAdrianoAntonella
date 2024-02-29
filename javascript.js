@@ -61,3 +61,13 @@ function cerrarPopup() {
   document.getElementById("popup").style.display = "none";
 }
 
+window.addEventListener("load", function() {
+  const loaderContainer = document.getElementById("loader-container");
+  const imageContainer = document.getElementById("image-container");
+
+  // Simular carga de datos
+  setTimeout(function() {
+    loaderContainer.style.display = "none";
+    imageContainer.style.display = "block";
+  }, 1000); // Cambia este valor al tiempo que desees para simular la carga
+});
