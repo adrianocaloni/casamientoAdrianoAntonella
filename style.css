@@ -484,7 +484,7 @@ p.mensaje-popup {
 #loader {
   width: 150px; /* Ancho de la barra de carga */
   height: 120px; /* Altura de la barra de carga */
-  margin-top: 95px; /* Ajuste de margen superior */
+  margin-top: 75px; /* Ajuste de margen superior */
   background-image: url('dist/img/anillos.png'); /* Ruta de la imagen */
   background-size: cover; /* Ajustar tamaño de la imagen */
   background-position: center; /* Centrar la imagen */
