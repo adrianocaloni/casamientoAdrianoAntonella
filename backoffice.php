@@ -127,7 +127,7 @@ $conn->close();
     include('includes/config/conexion.php');
 
     // Consulta SQL para obtener datos
-    $sql2 = "SELECT * FROM personas WHERE menuEspecial = 1 AND confirma = 'si'";
+    $sql2 = "SELECT * FROM personas WHERE menuEspecial = 1 AND confirma = 'si' AND id_tipo_menu IS NULL";
     $result2 = $conn->query($sql2);
 
     if ($result2->num_rows > 0) {

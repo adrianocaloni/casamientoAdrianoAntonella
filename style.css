@@ -351,7 +351,12 @@ height: 80px;
 }
 
 p.texto_nombres {
-  font-size: 30px;
+  margin-top: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+  text-shadow: -1px 1px 3px #4e0303;
+
 }
 
 
@@ -374,9 +379,9 @@ margin-top: 35px;
 }
 
 img.sobrePrincipal {
-  width: 300px;
-  border-radius: 25px;
-  margin-top: 15px;
+  width: 95%;
+  border-radius: 15px;
+  margin-top: 55px;
 }
 
 .sobrePrincipal {
@@ -389,6 +394,20 @@ img.sobrePrincipal {
   transform: scale(1.1); /* Ajusta el factor de escala según tus preferencias */
 }
 
+img.sobreAbrir {
+  width: 45%;
+  border-radius: 10px;
+  margin-top: 65px;
+}
+
+.sobreAbrir {
+  height: auto; /* Mantén la proporción de la imagen */
+  transition: transform 0.3s ease; /* Agrega una transición suave al movimiento */
+}
+
+.sobreAbrir:hover {
+  transform: scale(1.1); /* Ajusta el factor de escala según tus preferencias */
+}
 .cardenvio{
   margin-top: 200px;
 }
@@ -417,12 +436,14 @@ a.btn.btn-primary.botonVolver {
 }
 
 
-.texto_principal {
-  opacity: 0; /* Inicialmente establece la opacidad en 0 para que esté oculto */
-  animation: aparecer 5.8s forwards; /* 1.5 segundos de duración */
-  font-size: 60px;
+ /*.texto_principal {
+  font-size: 60px; 
   margin-top: 35px;
-}
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-shadow: -1px 1px 3px #4e0303;
+  color: black;
+}*/
 
 @keyframes aparecer {
   from {
@@ -466,3 +487,5 @@ p.mensaje-popup {
   font-family: 'Diphylleia', serif;
   font-size: 1.2rem;
 }
+
+

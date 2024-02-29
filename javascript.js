@@ -1,8 +1,8 @@
 // Fecha de inicio: 5 de enero de 204
-const fechaInicio = new Date('204-01-05T00:00:00');
+const fechaInicio = new Date('2024-02-29T00:00:00');
 
 // Fecha de fin: 9 de septiembre de 2024
-const fechaFin = new Date('2024-09-14T00:00:00');
+const fechaFin = new Date('2024-09-21T00:00:00');
 
 function actualizarContador() {
     const ahora = new Date();
@@ -60,3 +60,4 @@ window.onload = function() {
 function cerrarPopup() {
   document.getElementById("popup").style.display = "none";
 }
+
