@@ -520,3 +520,19 @@ span.metodoPagoCbu-number {
   font-family: 'Diphylleia', serif;
   font-size: 15px;
 }
+
+img.dressCode {
+  /* height: 10rem; */
+  width: 100%;
+}
+
+h3.dresscode {
+  font-family: 'Diphylleia', serif;
+  font-size: 28px;
+
+}
+
+img.suitdress {
+  height: 1.5rem;
+  margin-bottom: 10px;
+}
