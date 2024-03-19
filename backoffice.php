@@ -11,12 +11,13 @@
 </head>
 <body>
 
+<form method='post' action='actualizar_estado.php'>
 <?php
 // Incluir el archivo de conexión a la base de datos
 include('includes/config/conexion.php');
 
 // Consulta SQL para obtener datos de personas y sus valores de tarjeta
-$sql = "SELECT p.nombre, p.apellido, p.menuEspecial, p.adulto_menor, vt.valor_uno, tm.descripcion
+$sql = "SELECT p.nombre, p.apellido, p.menuEspecial, p.adulto_menor, vt.valor_uno, tm.descripcion, p.estado, p.id
         FROM personas AS p
         INNER JOIN valor_tarjeta AS vt ON vt.id = p.adulto_menor
         LEFT JOIN tipo_menu AS tm ON tm.id = p.id_tipo_menu
@@ -37,7 +38,9 @@ if ($result->num_rows > 0) {
                 <th>Menú especial</th>
                 <th>Tipo Menú</th>
                 <th>Persona</th>
-                <th>Valor</th>        
+                <th>Valor</th>   
+                <th>Estado</th>      
+                <th>Pagado</th>  
             </thead>";
 
     while ($row = $result->fetch_assoc()) {
@@ -54,9 +57,25 @@ if ($result->num_rows > 0) {
         // Generar opciones para las personas (ADULTO - MENOR)
         echo ($row['adulto_menor'] == '1') ? "Adulto" : "Niño";
         echo "</td>
-                <td>{$row['valor_uno']}</td>
-              </tr>";
-         // Sumar el valor_uno al total
+            <td>{$row['valor_uno']}</td>
+            <td>";
+
+        // Verificar el estado y mostrar "pendiente de pago" si el valor es igual a 0, de lo contrario, mostrar "pagado"
+        echo ($row['estado'] == 0) ? "Pendiente de pago" : "Pagado";
+        echo "</td>";
+
+        // Nueva columna para mostrar el botón PAGAR o "-"
+        echo "<td>";
+        if ($row['estado'] == 0) {
+            echo "<button type='submit' class='btn btn-secondary backoffice' name='pagar' value='" . $row['id'] . "'>Pagar</button>";    
+        } else {
+            echo "-";
+        }
+        echo "</td>";
+    
+        echo "</tr>";
+
+        // Sumar el valor_uno al total
         $total_valor_uno += $row['valor_uno'];
 
         // Contar el número de invitados
@@ -64,8 +83,8 @@ if ($result->num_rows > 0) {
     }
     echo "</table>";
     // Imprimir la sumatoria total de valor_uno y la cantidad de invitados
-     echo "<p style='text-align: right;'><b>Total $:</b> $total_valor_uno</p>";
-     echo "<p style='text-align: right;'><b>Cantidad de invitados:</b> $cantidad_invitados</p>";
+    echo "<p style='text-align: right;'><b>Total $:</b> $total_valor_uno</p>";
+    echo "<p style='text-align: right;'><b>Cantidad de invitados:</b> $cantidad_invitados</p>";
 
 } else {
     echo "0 resultados";
@@ -74,6 +93,7 @@ if ($result->num_rows > 0) {
 // Cerrar la conexión a la base de datos
 $conn->close();
 ?>
+</form>
 
 <form action="carga_adulto_menor.php" method="post">
     <?php
@@ -81,7 +101,7 @@ $conn->close();
     include('includes/config/conexion.php');
 
     // Consulta SQL para obtener datos
-    $sql = "SELECT * FROM personas WHERE confirma = 'si' AND adulto_menor IS NULL OR adulto_menor = 0";
+    $sql = "SELECT * FROM personas WHERE confirma = 'si' AND adulto_menor = 0 OR adulto_menor IS NULL";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -127,7 +147,7 @@ $conn->close();
     include('includes/config/conexion.php');
 
     // Consulta SQL para obtener datos
-    $sql2 = "SELECT * FROM personas WHERE menuEspecial = 1 AND confirma = 'si' AND id_tipo_menu IS NULL";
+    $sql2 = "SELECT * FROM personas WHERE confirma = 'si' AND menuEspecial = 1 AND id_tipo_menu IS NULL";
     $result2 = $conn->query($sql2);
 
     if ($result2->num_rows > 0) {
