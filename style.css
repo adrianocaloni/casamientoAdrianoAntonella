@@ -536,3 +536,30 @@ img.suitdress {
   height: 1.5rem;
   margin-bottom: 10px;
 }
+
+img.hopedajes-hoteles {
+  height: 2.2rem;
+  margin-bottom: 10px;
+}
+
+h3.hopedajes-hoteles {
+  font-family: 'Diphylleia', serif;
+  font-size: 25px;
+
+}
+.hopedajes-hoteles {
+  font-family: 'Diphylleia', serif;
+  font-size: 25px;
+
+}
+
+.hotel-titulo{
+  font-family: 'Diphylleia', serif;
+  font-size: 18px;
+
+}
+
+.hotel-telefono {
+  font-family: 'Diphylleia', serif;
+  font-size: 15px;
+}
