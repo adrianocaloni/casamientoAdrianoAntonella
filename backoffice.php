@@ -17,7 +17,7 @@
 include('includes/config/conexion.php');
 
 // Consulta SQL para obtener datos de personas y sus valores de tarjeta
-$sql = "SELECT p.nombre, p.apellido, p.menuEspecial, p.adulto_menor, vt.valor_uno, tm.descripcion, p.estado, p.id
+$sql = "SELECT p.nombre, p.apellido, p.menuEspecial, p.adulto_menor, vt.valor_uno,vt.valor_dos, tm.descripcion, p.estado, p.id
         FROM personas AS p
         INNER JOIN valor_tarjeta AS vt ON vt.id = p.adulto_menor
         LEFT JOIN tipo_menu AS tm ON tm.id = p.id_tipo_menu
@@ -28,7 +28,6 @@ $result = $conn->query($sql);
 // Inicializar variables para sumatoria y conteo
 $total_valor_uno = 0;
 $cantidad_invitados = 0;
-
 
 if ($result->num_rows > 0) {
     // Imprimir los datos en una tabla
@@ -49,7 +48,7 @@ if ($result->num_rows > 0) {
         echo "<tr>
                 <td>$nombreCompleto</td>
                 <td>";
-        // Verificar si menuEspecial es "si" o "no" y mostrar el texto correspondiente
+        // Verificar si menuEspecial es "1" o "0" y mostrar el texto correspondiente
         echo ($row['menuEspecial'] == '1') ? "Sí" : "No";
         echo "</td>
                 <td>{$row['descripcion']}</td>           
@@ -57,26 +56,29 @@ if ($result->num_rows > 0) {
         // Generar opciones para las personas (ADULTO - MENOR)
         echo ($row['adulto_menor'] == '1') ? "Adulto" : "Niño";
         echo "</td>
-            <td>{$row['valor_uno']}</td>
-            <td>";
-
-        // Verificar el estado y mostrar "pendiente de pago" si el valor es igual a 0, de lo contrario, mostrar "pagado"
-        echo ($row['estado'] == 0) ? "Pendiente de pago" : "Pagado";
-        echo "</td>";
-
-        // Nueva columna para mostrar el botón PAGAR o "-"
-        echo "<td>";
-        if ($row['estado'] == 0) {
+                <td>";
+        // Verificar el estado y mostrar el valor correspondiente
+        $valor_total = ($row['estado'] == '1') ? $row['valor_uno'] + $row['valor_dos'] : $row['valor_dos'];
+        echo $valor_total;
+        echo "</td>
+                <td>";
+        // Verificar el estado y mostrar "Pendiente de pago" o "Pagado"
+        echo ($row['estado'] == '0') ? "Pendiente de pago" : "Pagado";
+        echo "</td>
+                <td>";
+        // Mostrar el botón PAGAR o "-"
+        if ($row['estado'] == '0') {
             echo "<button type='submit' class='btn btn-secondary backoffice' name='pagar' value='" . $row['id'] . "'>Pagar</button>";    
         } else {
             echo "-";
         }
-        echo "</td>";
-    
-        echo "</tr>";
+        echo "</td>
+            </tr>";
 
-        // Sumar el valor_uno al total
-        $total_valor_uno += $row['valor_uno'];
+        // Sumar valor_uno y valor_dos al total solo si el estado es "1" (pagado)
+        if ($row['estado'] == '1') {
+            $total_valor_uno += $row['valor_uno'] + $row['valor_dos'];
+        }
 
         // Contar el número de invitados
         $cantidad_invitados++;
