@@ -21,13 +21,14 @@ $sql = "SELECT p.nombre, p.apellido, p.menuEspecial, p.adulto_menor, vt.valor_un
         FROM personas AS p
         INNER JOIN valor_tarjeta AS vt ON vt.id = p.adulto_menor
         LEFT JOIN tipo_menu AS tm ON tm.id = p.id_tipo_menu
-        WHERE p.confirma = 'si'";
+        WHERE p.confirma = 'si' AND p.estado = 0";
 
 $result = $conn->query($sql);
 
 // Inicializar variables para sumatoria y conteo
 $total_valor_uno = 0;
 $cantidad_invitados = 0;
+$cantidad_invitados_pend = 0;
 
 if ($result->num_rows > 0) {
     // Imprimir los datos en una tabla
@@ -58,7 +59,7 @@ if ($result->num_rows > 0) {
         echo "</td>
                 <td>";
         // Verificar el estado y mostrar el valor correspondiente
-        $valor_total = ($row['estado'] == '1') ? $row['valor_uno'] : $row['valor_dos'];
+        $valor_total =  $row['valor_dos'];
         echo $valor_total;
         echo "</td>
                 <td>";
@@ -74,6 +75,79 @@ if ($result->num_rows > 0) {
         }
         echo "</td>
             </tr>";
+
+        // Contar el número de invitados
+        $cantidad_invitados_pend++;
+    }
+    echo "</table>";
+    // Imprimir la sumatoria total de valor_uno y la cantidad de invitados
+    echo "<p style='text-align: right;'><b>Confirmados:</b> $cantidad_invitados_pend</p>";
+
+} else {
+    echo "0 resultados";
+}
+
+// Cerrar la conexión a la base de datos
+$conn->close();
+?>
+</form>
+
+
+<div>
+<?php
+// Incluir el archivo de conexión a la base de datos
+include('includes/config/conexion.php');
+
+// Consulta SQL para obtener datos de personas y sus valores de tarjeta
+$sql = "SELECT p.nombre, p.apellido, p.menuEspecial, p.adulto_menor, vt.valor_uno,vt.valor_dos, tm.descripcion, p.estado, p.id
+        FROM personas AS p
+        INNER JOIN valor_tarjeta AS vt ON vt.id = p.adulto_menor
+        LEFT JOIN tipo_menu AS tm ON tm.id = p.id_tipo_menu
+        WHERE p.confirma = 'si' AND p.estado = 1
+        ORDER BY p.adulto_menor ASC";
+
+$result = $conn->query($sql);
+
+// Inicializar variables para sumatoria y conteo
+$total_valor_uno = 0;
+$cantidad_invitados = 0;
+
+if ($result->num_rows > 0) {
+    // Imprimir los datos en una tabla
+    echo "<table class='table table-striped'>
+            <thead>
+                <th>Nombre</th>
+                <th>Menú especial</th>
+                <th>Tipo Menú</th>
+                <th>Persona</th>
+                <th>Valor</th>   
+                <th>Estado</th>      
+            </thead>";
+
+    while ($row = $result->fetch_assoc()) {
+        // Concatenar nombre y apellido
+        $nombreCompleto = $row['nombre'] . " " . $row['apellido'];
+        echo "<tr>
+                <td>$nombreCompleto</td>
+                <td>";
+        // Verificar si menuEspecial es "1" o "0" y mostrar el texto correspondiente
+        echo ($row['menuEspecial'] == '1') ? "Sí" : "No";
+        echo "</td>
+                <td>{$row['descripcion']}</td>           
+                <td>";
+        // Generar opciones para las personas (ADULTO - MENOR)
+        echo ($row['adulto_menor'] == '1') ? "Adulto" : "Niño";
+        echo "</td>
+                <td>";
+        // Verificar el estado y mostrar el valor correspondiente
+        $valor_total = ($row['estado'] == '1') ? $row['valor_uno'] : $row['valor_dos'];
+        echo $valor_total;
+        echo "</td>
+                <td>";
+        // Verificar el estado y mostrar "Pendiente de pago" o "Pagado"
+        echo ($row['estado'] == '1') ? "Pagado" : "Pendiente de pago";
+        echo "</td>
+                <td>";
 
         // Sumar valor_uno y valor_dos al total solo si el estado es "1" (pagado)
         if ($row['estado'] == '1') {
@@ -95,7 +169,7 @@ if ($result->num_rows > 0) {
 // Cerrar la conexión a la base de datos
 $conn->close();
 ?>
-</form>
+</div>
 
 <form action="carga_adulto_menor.php" method="post">
     <?php
