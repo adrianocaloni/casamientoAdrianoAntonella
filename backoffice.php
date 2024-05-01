@@ -58,7 +58,7 @@ if ($result->num_rows > 0) {
         echo "</td>
                 <td>";
         // Verificar el estado y mostrar el valor correspondiente
-        $valor_total = ($row['estado'] == '1') ? $row['valor_uno'] + $row['valor_dos'] : $row['valor_dos'];
+        $valor_total = ($row['estado'] == '1') ? $row['valor_uno'] : $row['valor_dos'];
         echo $valor_total;
         echo "</td>
                 <td>";
