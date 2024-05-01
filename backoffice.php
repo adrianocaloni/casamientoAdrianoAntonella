@@ -153,7 +153,7 @@ if ($result->num_rows > 0) {
 
         // Sumar valor_uno y valor_dos al total solo si el estado es "1" (pagado)
         if ($row['estado'] == '1') {
-            $total_valor_uno += $row['valor_uno'] + $row['valor_dos'];
+            $total_valor_uno += $row['valor_uno'];
         }
 
         // Contar el número de invitados
