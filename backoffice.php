@@ -11,6 +11,7 @@
 </head>
 <body>
 
+<div class="container text-center">
 <form method='post' action='actualizar_estado.php'>
 <?php
 // Incluir el archivo de conexión a la base de datos
@@ -91,9 +92,9 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 </form>
+</div>
 
-
-<div>
+<div class="container text-center">
 <?php
 // Incluir el archivo de conexión a la base de datos
 include('includes/config/conexion.php');
@@ -121,7 +122,8 @@ if ($result->num_rows > 0) {
                 <th>Tipo Menú</th>
                 <th>Persona</th>
                 <th>Valor</th>   
-                <th>Estado</th>      
+                <th>Estado</th>
+                <th></th> <!-- Celda vacía para compensar la columna adicional en la primera tabla -->
             </thead>";
 
     while ($row = $result->fetch_assoc()) {
@@ -160,7 +162,7 @@ if ($result->num_rows > 0) {
     echo "</table>";
     // Imprimir la sumatoria total de valor_uno y la cantidad de invitados
     echo "<p style='text-align: right;'><b>Total $:</b> $total_valor_uno</p>";
-    echo "<p style='text-align: right;'><b>Cantidad de invitados:</b> $cantidad_invitados</p>";
+    echo "<p style='text-align: right;'><b>Cantidad de invitados PAGOS:</b> $cantidad_invitados</p>";
 
 } else {
     echo "0 resultados";
@@ -170,6 +172,7 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 </div>
+
 
 <form action="carga_adulto_menor.php" method="post">
     <?php
